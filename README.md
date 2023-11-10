@@ -4,6 +4,8 @@
 This repo allows you to control easily the Gripper3F from your computer with ROS, sending commands (open, close) and changing gripping modes.
 Also, is possible to set up the force, speed, and the precise position to go. 
 
+it's designer to work at the best with the [UR10 robot interface](https://github.com/igor-lirussi/UR10_robot_interface)
+
 ### Topics:
 - Robotics
 - Gripper
