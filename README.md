@@ -1,42 +1,47 @@
-# TemplateRepository
-**Brief description here, like in the about**
+# Gripper3F_interface
+**Gripper3F Robot interface for controlling the robotic gripper with ROS**
 ## Description 
-A repository used as a base, not to write all over again. 
-
-1. Generate a new repo with this one as a template
-2. Add **Description**
-3. Add **Tags**
-4. Add **.gitignore** (Add file-> Create New File -> Type ".gitignore" -> Choose .gitignore -> Commit)
-5. Review **Licence** (Add file-> Create New File -> Type "LICENCE" -> Choose a licence template -> Review and submit)
-6. Change **image result** in /img/result.jpg
-7. Change **image social preview** in settings 
-8. Edit this **README**
-9. Optionally add the **_config.yml** and activate github pages
+This repo allows you to control easily the Gripper3F from your computer with ROS, sending commands (open, close) and changing gripping modes.
+Also, is possible to set up the force, speed, and the precise position to go. 
 
 ### Topics:
-- Repository 
-- Template
-- Code Automation
+- Robotics
+- Gripper
 
 ## Result
 ![Result](./img/result.jpg)
 
+![Result](./img/image.gif)
+
 ## Requirements & Dependencies
-- Programming Language
-- Libraries
+- ROS 
+- rospy and numpy
+- https://github.com/ros-industrial/robotiq build in your system with catkin
+- https://github.com/Nishida-Lab/robotiq_3f_ros_pkg build in your system with catkin
+
 
 ## Install 
-*   clone in the route directory
-*   ```./install.sh```
+*   clone in your project
+*   remember to source the setup.bash of catkin
+*   run the node
+*   use the interface as in the "Run" section
 
 ## Run
-```bash
-execution command
+```python
+from gripper3f_interface import Gripper
+import rospy
+
+rospy.init_node("gripper")
+rospy.sleep(1.0)
+gripper = Gripper()
+gripper.activate_gripper()
+
+gripper.close_gripper()
 ```
 
 ## Useful Resources & Extra
-- Links
-- Resources
+- https://github.com/ros-industrial/robotiq
+- https://github.com/Nishida-Lab/robotiq_3f_ros_pkg
 
 ## Authors
 * **Igor Lirussi** @ BOUN Boğaziçi University - CoLoRs (Cognitive Learning and Robotics) Lab
