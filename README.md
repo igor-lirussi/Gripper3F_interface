@@ -6,6 +6,27 @@ Also, is possible to set up the force, speed, and the precise position to go.
 
 It's designed to work also with the [UR10 robot interface](https://github.com/igor-lirussi/UR10_robot_interface)
 
+| **Method**                | **Description**                                                                 |
+|----------------------------|---------------------------------------------------------------------------------|
+| **`activate_gripper()`**   | Activates the gripper. Returns `True` if successful.                            |
+| **`reset()`**              | Resets the gripper to its default state. Returns `True` if successful.          |
+| **`close_gripper()`**      | Closes the gripper hand. Returns `True` if successful.                          |
+| **`open_gripper()`**       | Opens the gripper hand. Returns `True` if successful.                           |
+| **`set_mode(mode)`**       | Sets the operating mode (`basic`, `pinch`, `wide`, `scissor`). Returns `True` if successful. |
+| **`get_mode()`**           | Retrieves the current operating mode as a string.                              |
+| **`get_mode_success()`**   | Checks if the last mode retrieval was successful. Returns `True` if successful. |
+| **`set_position(position)`**| Sets the gripper position (clamped between `0` and `255`). Returns `True` if successful. |
+| **`get_position()`**       | Retrieves the target position of the gripper as an integer.                     |
+| **`get_position_fingers()`**| Retrieves positions of individual gripper fingers as a list `[A, B, C]`.       |
+| **`get_position_success()`**| Checks if the last position retrieval was successful. Returns `True` if successful. |
+| **`set_speed(speed)`**     | Sets the movement speed of the gripper. Returns `True` if successful.           |
+| **`get_speed()`**          | Retrieves the current speed setting as an integer.                              |
+| **`get_speed_success()`**  | Checks if the last speed retrieval was successful. Returns `True` if successful.|
+| **`set_torque(torque)`**   | Sets the torque level of the gripper. Returns `True` if successful.             |
+| **`get_torque()`**         | Retrieves the current torque setting as an integer.                             |
+| **`get_torque_success()`** | Checks if the last torque retrieval was successful. Returns `True` if successful.|
+
+
 ### Topics:
 - Robotics
 - Gripper

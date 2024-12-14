@@ -1,3 +1,7 @@
+"""
+Description: Gripper3F interface
+Author: Igor Lirussi (https://igor-lirussi.github.io)
+"""
 import rospy
 import numpy as np
 from robotiq_3f_srvs.srv import Activate,Reset,Move,SetMode,GetMode,SetPosition,GetPosition,SetSpeed,GetSpeed,SetTorque,GetTorque

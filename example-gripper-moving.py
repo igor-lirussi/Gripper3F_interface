@@ -1,3 +1,7 @@
+"""
+Description: Example of usage of Gripper3F interface
+Author: Igor Lirussi (https://igor-lirussi.github.io)
+"""
 from gripper3f_interface import Gripper
 import rospy
 
